@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #fffdfa;
+    background-size: cover;
+    color: #2c3b14;
+}
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 0 2rem;
+}
+.logo {
+    height: 72px;
+    margin-right: 1rem;
+}
+.brand {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #2c3b14;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+.cart-icon {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+.main-nav a {
+    color: #2c3b14;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+.main-nav a:hover {
+    border-bottom: 2px solid #2c3b14;
+}
+.hero {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.titulo-principal {
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #2c3b14;
+    margin-bottom: 1rem;
+}
+.subtitulo {
+    font-size: 1.5rem;
+    color: #2c3b14;
+    margin-bottom: 2rem;
+}
+footer {
+    background: #fffdfa;
+    color: #2c3b14;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 1rem;
+    border-top: 1px solid #f3e6e8;
+    margin-top: 3rem;
+}
+.libretas-bloque {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1100px;
+    margin: 2rem auto 0 auto;
+    gap: 3rem;
+}
+.libretas-titulo {
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: #2c3b14;
+    border: 2px solid #2c3b14;
+    background: #fffdfa;
+    padding: 2rem 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 340px;
+    box-sizing: border-box;
+}
+.libretas-texto {
+    color: #2c3b14;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 500px;
+    text-align: left;
+}
+.libretas-texto::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #2c3b14;
+    margin: 2rem 0 0 0;
+    align-self: flex-start;
+}
+.productos-lista {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 1100px;
+    margin: 2rem auto 0 auto;
+}
+.producto {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(209,91,123,0.08);
+    padding: 1.5rem;
+    text-align: center;
+    width: 260px;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.2s;
+}
+.producto:hover {
+    box-shadow: 0 4px 20px rgba(209,91,123,0.18);
+}
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.producto h3 {
+    margin: 0.5rem 0;
+    color: #2c3b14;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.producto p {
+    font-size: 1.1rem;
+    color: #2a7d76;
+    font-weight: bold;
+}
+@media (max-width: 900px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .brand {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .main-nav {
+        gap: 1.2rem;
+        font-size: 1rem;
+    }
+    .titulo-principal {
+        font-size: 2.2rem;
+    }
+    .productos-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+    .producto {
+        width: 90%;
+    }
+}

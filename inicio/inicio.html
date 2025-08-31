@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesed Cuadernos Artesanales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="inicio.css">
+        <style>
+            body {
+                    background-image: url('../Imagenes/Fondos/Fondo Madera.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <img src="../Imagenes/Fondos/Hesed Logo.png" alt="Logo Hesed" class="logo">
+            <span class="brand">HESED</span>
+            <a href="productos.html" class="cart-icon" title="Ver carrito">
+                <svg width="32" height="32" fill="#2a7d76" viewBox="0 0 24 24"><path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm1.104-2.447l1.447-8.447h-16.551l1.447 8.447c.104.607.646 1.053 1.265 1.053h10.127c.619 0 1.161-.446 1.265-1.053zm-13.104-10.553c0-.553.447-1 1-1h12c.553 0 1 .447 1 1v1h-14v-1z"/></svg>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <a href="../inicio/inicio.html">Inicio</a>
+            <a href="../productos/productos.html">Tienda</a>
+            <a href="../contacto/contacto.html">Contacto</a>
+            <a href="#acerca">Acerca de mí</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1 class="titulo-principal">LIBRERIA  ARTESANAL</h1>
+            <p class="subtitulo">Arte hecho con amor</p>
+        </section>
+    </main>
+        <div class="carrusel-wrapper">
+            <img class="imagen-centro" alt="Imagen carrusel">
+            <div class="carrusel-controles">
+                <button id="carrusel-prev" class="carrusel-btn">&#8592;</button>
+                <div id="carrusel-puntos" class="carrusel-puntos"></div>
+                <button id="carrusel-next" class="carrusel-btn">&#8594;</button>
+            </div>
+        </div>
+            <div class="libretas-bloque">
+                <div class="libretas-titulo">
+                    Nuestros cuadernos
+                </div>
+                <div class="libretas-texto">
+                    Elaboramos piezas únicas 100% artesanales donde la encuadernación y las texturas se unen para brindarte la mejor experiencia posible. La magia ocurre en nuestro pequeño taller y es el resultado de unas manos que trabajan con el alma, papeles de muy alta calidad y el cuidado de cada detalle.
+                </div>
+            </div>
+    <footer>
+        <p>&copy; 2025 Hesed Cuadernos Artesanales. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+    <script src="inicio.js"></script>
+    <script>
+    // Transición lateral al cambiar de página
+    document.querySelectorAll('.main-nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            // Solo para enlaces que navegan a otra página
+            const href = link.getAttribute('href');
+            if (href && href !== '#' && !href.startsWith('#')) {
+                e.preventDefault();
+                document.body.style.transition = 'transform 0.6s cubic-bezier(.77,0,.18,1), opacity 0.6s';
+                document.body.style.opacity = '0';
+                document.body.style.transform = href === 'inicio.html' ? 'translateX(100vw)' : 'translateX(-100vw)';
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 600);
+            }
+        });
+    });
+    </script>
+    </body>
